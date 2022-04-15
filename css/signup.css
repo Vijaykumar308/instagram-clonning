@@ -1,0 +1,76 @@
+body{
+			width: 100vw;
+			height: 100vh;
+			background-color: #F8F8F8;
+			overflow-x: hidden;
+		}
+		.form-box{
+			width: 25.7vw;
+			height: 83vh;
+			background-color: #fff;
+			border: 1px solid lightgray;
+			position: absolute;
+			top: 34px; left: 36.6%;
+		}
+		.heading{
+			margin: 2px 8px;
+			/*background-color: #fff;*/
+		}
+		.signup_msg{
+			color: #8e8e8e;
+			line-height: 20px;
+			text-align: center;
+			margin-top: -12px;
+			padding: 0px 40px;
+			font-size: 17px;
+			font-weight: 600;
+		}
+		.login-with-fb-btn{
+			text-align: center;
+			margin-top: 1.9em;
+		}
+		.signupBtn{
+			width: 268px;
+			height: 32px;
+			color: #fff;
+			padding: 5px 9px;
+			background-color: #0095f6;
+		}
+		.hr-lines{
+			margin: 10px 27px;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		.h-line{
+			width:107.5px;
+			height:1px;
+			background-color: #dbdbdb;
+		}
+		.signup-form-feilds{
+			padding: 20px 41px;
+		}
+		.show-hide-btn{
+			background: none;
+			border: none;
+			display: none;
+			position: fixed;
+			top: 66.7%;
+			left: 55.6%;
+		}
+		#signupBtnId{
+			margin-top: -30px;
+			height: 30px;
+			padding-top: 3px;
+		}
+		.bysingup{
+			font-size: 12px;
+			line-height: 16px;
+			color: #8e8e8e;
+			margin: 10px 0px;
+			/*background-color: lightgrey;*/
+		}
+		.bysingup a{
+			font-weight: 600;
+			color: #8e8e8e;
+		}

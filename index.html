@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Instagram - login</title>
+	<!-- <h2>Hello wrld</h2> -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/billabong"> -->
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Lobster&family=:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet"> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lobster', cursive; -->
+
+	<link rel="stylesheet" href="css/login.css">
+	<style>
+	body{
+		/*overflow-x: hidden;*/
+	}
+		.show-hide-btn{
+			/*margin: 9px -51px;*/
+			background: none;
+			border: none;
+			display: none;
+			position: fixed;
+			top: 39.2%;
+			right: 26.2%;
+		}
+	</style>
+</head>
+<body>
+	<section class="cus-section container-fuild">
+		<div class="main-div">
+
+			<div class="phone">
+				<img src="Images/instagram-phone.png" alt="insta-phone">
+			</div>
+
+			<div class="login-form-section">
+				<div class="login-form">
+
+					<div class="instagram-logo">
+						<img src="Images/instagram-logo.png" alt="instagram-logo">
+					</div>
+
+					<div class="login-form-fields">
+						<form action="profile.php" method="get">
+							<input type="text" id="username" name="user" placeholder="Phone number, username, or email" autocomplete="off"><br>	
+							<input type="password" id="password"placeholder="Password">
+							<button type="button" class="show-hide-btn" id="showbtn">Show</button>	
+							<br><br>
+							<button type="submit" id="loginBtn" name="logiBtn" class="btn btn-primary w-100" disabled="disabled" value="clicked">Log In</button>
+						</form>
+					</div>
+
+					<div class="hr-lines">
+						<div class="h-line"> </div>
+						<div style="font-weight: 0;color:grey;font-size: 12px; font-family:Roboto;">OR</div>
+						<div class="h-line"></div>
+					</div>
+
+					<div class="login-with-fb">
+						<a href="#" class="fblink">
+						  <i class="fab fa-facebook-square" style="font-size:18px;color: #375BA2; margin-right: 10px;"></i>Log in with Facebook
+						</a>
+						<!-- <span id="erro-msg">Check your password</span> -->
+						<a href="#" style="font-size: 12px;display: block; margin: 20px 0px;color:grey; text-decoration: none;">Forgot password?</a>
+					</div>	
+				</div>
+
+				<div class="signup-link">
+					<p>Don't have an account?<a href="signup.html" style="text-decoration:none;"> Sign up</a></p>	
+				</div>
+
+				<div class="text-center">
+					<p class="text-center mt-2" style="font-size:14px;">Get the app.</p>
+					<a href="#"><img src="images/appstore-icon.jpg" class="rounded" alt="appstore"></a>
+					<a href="#"><img src="images/playstore-icon.jpg"class="rounded ml-2" alt="playstore"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+		<script>
+			$(document).ready(function(){				
+				// hidding and showing show btn on the basic of input				
+				$("#password").keyup(function(){
+					 let passval = $("#password").val();
+					 if(passval === ""){
+						$("#showbtn").css("display","none"); 	
+					 }else{
+						$("#showbtn").css("display","block");
+					 }
+				});
+
+				// changing the btn from hide and show
+				$("#showbtn").click(function(){
+					let pwdAttr = $("#password").attr('type');
+					if (pwdAttr === "password"){
+						$("#password").prop("type","text");
+						$("#showbtn").html("Hide");
+					}else{
+						$("#password").prop("type","password");
+						$("#showbtn").html("Show");
+					}
+				});		
+
+				 //enabling the login button
+				 $("#username").keyup(function(){
+				 	var username = $(this).val();
+				 	if (username === ""){
+				 		// console.log(username);
+				 		$('#loginBtn').attr("disabled","disabled");
+				 	}else{
+				 	 	validate();
+				 	 	// console.log("else part "+username.value);
+				 	}
+				 	 // devalidate();
+				 });
+
+				 $("#password").keyup(function(){
+				 	var password = $(this).val();
+				 	console.log(password);
+				 	if (password.length < 6){
+				 		$('#loginBtn').attr("disabled","disabled");
+				 	}else{
+				 		console.log("sdf");
+					 	validate();
+				 	}
+				 });
+				 function validate(){
+					if (username.value !=="" && password.value.length >=6){
+						console.log("great vijay its working");
+						   event.preventDefault();
+						   $('#loginBtn').removeAttr("disabled");
+					}
+				 }
+				
+			});
+		</script>
+</body>
+</html>

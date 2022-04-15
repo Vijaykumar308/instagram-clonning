@@ -1,0 +1,99 @@
+.cus-section{
+	width: 100vw;
+	height: 100vh;
+	background-color: #F8F8F8;
+	/*background-color: lightblue;*/
+}	
+.main-div{
+	position: relative;
+	width: 70vw;
+	margin: auto;
+	padding-top: 30px;
+	/*background-color: lightcoral;*/
+	display: flex;
+}
+.phone{
+	margin-left: 30px;
+	/*background-color: red;*/
+}
+.phone img{
+	margin-top: 13px;
+	margin-left: 3.43em;
+}
+
+/*login-form */
+.login-form-section{
+	width: 25.7vw;
+	margin-left: 19px;
+	/*background-color: lightcoral;*/
+}
+.login-form{
+	margin: 9% 0px;
+	background-color: #fff;
+	border: 1px solid lightgray;
+	height: 390px;
+}
+.instagram-logo{
+	/*background-color: red;*/
+	margin-left: 10px;
+}
+.instagram-logo img{
+	margin-right: 20px;
+	/*border-bottom: 1px solid lightgray;*/
+}
+.login-form-fields{
+	margin-top: -4px;
+	padding: 20px 41px;
+}
+.login-form-fields input{
+	width: 100%;	
+	padding: 10px 8px;
+	margin-bottom: 5px;
+	background-color: #F8F8F8;
+	outline: none;
+	border: 1px solid lightgray;
+	border-radius: 4px;
+	font-size: 12px;
+}
+button{
+	margin-top: -23px;
+	font-size: 14px !important;
+	font-weight: 500 !important;
+	cursor: pointer;
+}
+.hr-lines{
+	margin: -5px 27px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.h-line{
+	width:107.5px;
+	height:1px;
+	background-color: lightgrey;
+}
+.login-with-fb{
+	margin: 20px 30px;
+	text-align: center;
+}
+.login-with-fb .fblink{
+	color:#375BA2;
+	text-decoration: none;
+	font-weight: 500;
+	font-size:14px;
+}
+.signup-link{
+	margin-top: -20px;
+	width: 25.7vw;
+	text-align: center;
+	height:60px;
+	line-height: 60px;
+	border: 1px solid lightgray;
+	background-color: #fff;
+}
+.signup-link p{
+	font-size: 14px;
+}
+.signup-link p a{
+	font-weight: 600;
+}

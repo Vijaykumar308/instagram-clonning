@@ -1,0 +1,60 @@
+body{
+		overflow-x: hidden;
+	}
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		.navigation{
+			width: 100vw;
+			background-color: #fff;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			height: 60px;
+			border-bottom: 1px solid lightgray;
+		}
+		.navigation .instagram_logo{
+			margin-top: 7px;
+			margin-left: 2px;
+		}
+		.insta_search_box{
+			position: absolute;
+			width: 270px;	
+			height: 36px;
+			border-radius: 5px;
+			background-color: #efefef;
+			/*background-color: pink;*/
+
+		}
+		.insta_search_box input[type="search"]{
+			width: 250px;	
+			height: 36px;
+			font-weight: 300;
+			padding: 10px;
+			font-size: 15px;
+			color: #8e8e8e;
+			letter-spacing: .6px;
+			border-radius: 5px;
+			border: 1px solid #efefef;
+			background-color: #efefef;
+			outline: none;
+			/*color: red;*/
+			/*background-color: red;*/
+		}
+		.navigation_media{
+			margin-left: 25%;
+			display: flex;
+			align-items: center;
+		}	
+		.navigation_media a{
+			margin-left: 21px;
+			font-weight: bold;
+		}
+		.navigation_media a img{
+			width: 26px;
+			/*border: 1px solid black;*/
+			/*border-radius: 50%; */
+		}
+		.navigation_media a .profile_image{
+			width: 27px;
+			border: 1px solid black;
+			border-radius: 50%;
+		}
